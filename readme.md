@@ -41,6 +41,6 @@ nauczyciel może:
 * zakładanie profilu przez rodzica, ma możliwość przeglądania tylko profilu swojego dziecka oraz wysyłania wiadomości do konkretnego nauczyciela
 * zakładanie profilu przez ucznia, ma najmniejsze uprawnienia, może tylko przeglądać swoje oceny
 * dokładna informacja o ocenach wraz z komentarzem nauczyciela
-* możliwość wydruku planu lekcji, list klas
+* możliwość wydruku planu lekcji, list, klas
 * rodzice odczytują wiadomość po zalogowaniu się do systemu dziennika
 * wyszukiwanie po nazwisku ucznia, wyszukiwanie po nazwie przedmiotu
