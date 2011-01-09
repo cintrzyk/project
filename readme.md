@@ -1,5 +1,4 @@
-﻿	*
-	* Marcin Brzeziński
+* Marcin Brzeziński
     * Adam Grabowski
     * Michał Rogulski
 	* Michał Podlecki
