@@ -1,3 +1,5 @@
+Web Masters - w składzie:
+
 * Marcin Brzeziński
 * Adam Grabowski
 * Michał Rogulski
