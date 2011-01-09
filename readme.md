@@ -1,10 +1,10 @@
 * Marcin Brzeziński
-    * Adam Grabowski
-    * Michał Rogulski
-	* Michał Podlecki
-	* Piotr Pazdan
+* Adam Grabowski
+* Michał Rogulski
+* Michał Podlecki
+* Piotr Pazdan
 
-07.01.2010 r.
+07.01.2011 r.
 
 #Be In Touch
 
