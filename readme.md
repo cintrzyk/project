@@ -1,11 +1,12 @@
-﻿	*
-	* Marcin Brzeziński
-    * Adam Grabowski
-    * Michał Rogulski
-	* Michał Podlecki
-	* Piotr Pazdan
+﻿Web Masters - w składzie:
 
-07.01.2010 r.
+* Marcin Brzeziński
+* Adam Grabowski
+* Michał Rogulski
+* Michał Podlecki
+* Piotr Pazdan*
+
+07.01.2011 r.
 
 #Be In Touch
 
