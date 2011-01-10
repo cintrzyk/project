@@ -22,5 +22,20 @@ class ProfilesController extends AppController {
 		}
 	}
 	
+	function edit($id = null) {
+		if ($id == null) {
+			$this->Profile->id = $this->Session->read('zalogowany.id');
+		}
+		if (empty($this->data)) {
+			$this->data = $this->Profile->read();
+		} else {
+			$this->Attachment->upload($this->data['Profile']);
+			$this->Profile->save($this->data);
+			$this->Session->setFlash('Profil został zaktualizowany.');
+			$this->redirect(array('action' => 'profile'));
+		}
+	}	
+	
+	
 }
 ?>
