@@ -90,9 +90,10 @@
 	}
 	</style>
 	
-	
 </head>
 <body>
+
+<div id="logo">BeInTouch</div>
 <div id="container">
 	
 	<?php if($this->Session->check('zalogowany')): ?>

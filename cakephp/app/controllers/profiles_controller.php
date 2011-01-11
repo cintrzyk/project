@@ -27,6 +27,13 @@ class ProfilesController extends AppController {
 			$this->set('profiles', $znalezione);
 		}
 	}
+	
+	function addFriend($id = null) {
+		$this->data['Friend']['friend_id'] = $id;
+		$this->data['Friend']['profile_id'] = $this->Session->read('zalogowany.id');
+		$this->Profile->Friend->save($this->data);
+		$this->redirect(array('action' => 'profile'));
+	}
 
 	function show($id = null) {
 		$this->Profile->id = $id;
