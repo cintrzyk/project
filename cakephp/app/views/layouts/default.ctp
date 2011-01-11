@@ -84,7 +84,14 @@
 	
 </head>
 <body>
-<?php echo $this->Session->flash(); ?>
-<?php echo $content_for_layout; ?>
+<div id="container">
+	
+	
+	
+		<?php echo $this->Session->flash(); ?>
+		<?php if($this->Session->check('zalogowany')):  '<div id="top-welcome">Witaj, <b>'.$this->Session->read('zalogowany.imie').'</b> '.$html->link('Edytuj profil', array('controller' => 'profiles', 'action' => 'edit')).'|'.$html->link('Mój profil', array('controller' => 'profiles', 'action' => 'profile')).'|'.$html->link('Wyloguj', array('controller' => 'users', 'action' => 'logout')).'</div>'; endif;?>
+		<?php echo $content_for_layout; ?>
+	</div>
+	<div id="footer">Web Masters &copy; 2011</div>
 </body>
 </html> 
