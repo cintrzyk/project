@@ -22,6 +22,16 @@ class ProfilesController extends AppController {
 		}
 	}
 	
+	function deleteFriend($id = null) {
+		$dousuniecia = $this->Profile->query("SELECT * FROM friends WHERE (friends.profile_id=".$this->Session->read('zalogowany.id')." AND friends.friend_id=".$id.") OR (friends.profile_id=".$id." AND friends.friend_id=".$this->Session->read('zalogowany.id').")");
+		//$dousuniecia = $this->Profile->Friend->findByProfileId($id);
+		//$this->Session->write('test',$dousuniecia);
+		$this->Session->setFlash('Znajomy został pomyślnie usunięty.');
+		$this->Profile->Friend->delete($dousuniecia[0]['friends']['id']);
+		
+		$this->redirect(array('action' => 'profile'));
+	}
+	
 	function edit($id = null) {
 		if ($id == null) {
 			$this->Profile->id = $this->Session->read('zalogowany.id');
