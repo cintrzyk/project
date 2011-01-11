@@ -27,3 +27,111 @@ a {
 	font-weight: bold; 
 	font-size: 12px;
 }
+
+
+a:hover {
+	color: #367889;
+	text-decoration:none;
+}
+a img {
+	border:none;
+}
+
+div.gravatar {
+	border: 1px solid rgb(72,72,72);
+	padding: 2px;
+	float: left;
+	background: white;
+	width: 300px;
+}
+
+img#gravatar {
+	display: block;
+	float: left; 
+	margin: 0 auto;
+	/* padding: 2px; */
+	/* background: white; */
+}
+
+
+div.info {
+	overflow: hidden;
+	padding: 10px;
+	margin: 20px 0;
+	background: #4e7692 /* -moz-linear-gradient(top, #4e7692, #438dc0 80%); */
+}
+
+div.dane {
+	float: right;
+	width: 264px;
+	margin: 40px 30px 30px 0;
+	border-left: 1px dotted #CFDCE6; 
+	padding-left: 16px;
+}
+
+div.info p {
+	background: transparent;
+	padding: 5px;
+	margin: 0 0 10px;
+	text-align: left;
+	border-bottom: 1px dotted #cfdce6;
+	font-size: 12px;
+	color: #cfdce6;
+}
+
+
+
+p span {
+	color: white;
+	font-weight: bold;
+}
+
+h1 {
+	background:#fff;
+	color: black;
+	margin-bottom: 0.5em;
+	font-weight: normal;
+	font-family: Georgia, serif;
+}
+
+h1 span {
+	color: #4a76f2;
+}
+
+h2 {
+	background:#fff;
+	color: black;
+	margin-bottom: 0.5em;
+	font-weight: normal;
+	font-family: Georgia, serif;
+}
+
+h3 {
+	color: #993;
+	font-family:'Gill Sans','lucida grande', helvetica, arial, sans-serif;
+}
+h4 {
+	color: #993;
+}
+
+
+/** Layout **/
+#container {
+	text-align: left;
+}
+
+#header{
+	padding: 10px 20px;
+}
+#header h1 {
+	line-height:20px;
+	background: #003d4c url('../img/cake.icon.png') no-repeat left;
+	color: #fff;
+	padding: 0px 30px;
+}
+#header h1 a {
+	color: #fff;
+	background: #003d4c;
+	font-weight: normal;
+	text-decoration: none;
+}
