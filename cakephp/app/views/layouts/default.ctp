@@ -8,6 +8,23 @@
 	<?php echo $this->Html->script('jquery.gmap-1.1.0-min'); ?>
 	<script src="http://maps.google.com/maps?file=api&amp;v=2&amp;sensor=false&amp;key=ABQIAAAAIS_dzTcF66Tlpp5lagb-IxQQPMc1US4WhDrj9TsC7G-6SsMJcRQbUf0gCzuDR8GP3qjALMe0oT1KMg" type="text/javascript"></script>
 	
+	<script type="text/javascript">
+		$(document).ready(function() {
+			if ($('#flashMessage')) {
+				setTimeout(function() {
+					$('#flashMessage').fadeTo('slow', 0, function() {
+						$(this).slideUp('slow');
+					});
+				}, 4000);
+			}
+			
+			$('#first').mouseover(function() {
+				$('#first ul').show();
+			}).mouseout(function() {
+				$('#first ul').hide();
+				});
+		});
+	</script>
 	
 	<style type="text/css">
 	
@@ -86,7 +103,19 @@
 <body>
 <div id="container">
 	
-	
+	<?php if($this->Session->check('zalogowany')): ?>
+	<div id="top-welcome">
+		<ul>
+			<li id="first"><?php echo $html->link('Mój profil', array('controller' => 'profiles', 'action' => 'profile'))?>
+				<ul>
+					<li><?php echo $html->link('Pokaż', array('controller' => 'profiles', 'action' => 'profile'))?></li>
+					<li><?php echo $html->link('Edytuj', array('controller' => 'profiles', 'action' => 'edit')); ?></li>
+					<li><?php echo $html->link('Wyloguj', array('controller' => 'users', 'action' => 'logout')); ?></li>
+				</ul>
+			</li>
+		</ul>
+	</div>
+	<?php endif; ?>
 	
 		<?php echo $this->Session->flash(); ?>
 		<?php if($this->Session->check('zalogowany')):  '<div id="top-welcome">Witaj, <b>'.$this->Session->read('zalogowany.imie').'</b> '.$html->link('Edytuj profil', array('controller' => 'profiles', 'action' => 'edit')).'|'.$html->link('Mój profil', array('controller' => 'profiles', 'action' => 'profile')).'|'.$html->link('Wyloguj', array('controller' => 'users', 'action' => 'logout')).'</div>'; endif;?>
