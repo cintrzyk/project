@@ -18,7 +18,7 @@ class ProfilesController extends AppController {
 			$this->Attachment->upload($dane['Profile']);
 			$this->Profile->save($dane);
 				$this->Session->setFlash('Profil został pomyślnie dodany');
-				$this->redirect(array('action' => 'index'));
+				//$this->redirect(array('action' => 'index'));
 		}
 	}
 	
