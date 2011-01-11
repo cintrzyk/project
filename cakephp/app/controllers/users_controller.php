@@ -6,7 +6,7 @@ class UsersController extends AppController {
 	var $components = array('Session');
 	var $helpers = array('Html','Form');
     //var $components = array('Auth'); // Not necessary if declared in your app controller
-
+	
 	var $userProfile = array('controller' => 'profiles', 'action' => 'profile');
 	
 	function index() {
@@ -19,7 +19,28 @@ class UsersController extends AppController {
 		}
 	}
 	
-    function login() {
+	// rejestracja
+	function register() {
+		if (!empty($this->data)) {
+			$user = $this->User->save($this->data);
+			// If the user was saved, Now we add this information to the data
+			// and save the Profile.
+      
+			if (!empty($user)) {
+				// The ID of the newly created user has been set
+				// as $this->User->id.
+				$this->data['Profile']['user_id'] = $this->User->id;
+
+				// Because our User hasOne Profile, we can access
+				// the Profile model through the User model:
+				$this->User->Profile->save($this->data);
+				$this->Session->setFlash('Rejestracja przebiegła pomyślnie. Zaloguj się.');
+				$this->redirect(array('action' => 'login'));
+			}
+		}
+	}
+	
+	function login() {
 		//print_r($this->Session->read());
 			// po wypelnieniu formularza logowania
 		   if (empty($this->data)) 
@@ -44,11 +65,12 @@ class UsersController extends AppController {
 				   }
 			   }    
 	}
-
+		
 	function logout() {
 		$this->Session->delete('zalogowany');
 		$this->Session->setFlash('Wylogowano');
 		$this->redirect('/users/');
 	}
 }
+
  ?>
