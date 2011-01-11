@@ -24,7 +24,7 @@ body {
 a {
 	color: #003d4c;
 	text-decoration: underline;
-	font-weight: bold; 
+	/*font-weight: bold;*/ 
 	font-size: 12px;
 }
 
@@ -47,7 +47,7 @@ div.gravatar {
 
 img#gravatar {
 	display: block;
-	float: left; 
+	/*float: left;*/ 
 	margin: 0 auto;
 	/* padding: 2px; */
 	/* background: white; */
@@ -65,7 +65,7 @@ div.dane {
 	float: right;
 	width: 264px;
 	margin: 40px 30px 30px 0;
-	border-left: 1px dotted #CFDCE6; 
+	/*border-left: 1px dotted #CFDCE6;*/ 
 	padding-left: 16px;
 }
 
