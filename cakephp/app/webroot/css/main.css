@@ -1,0 +1,29 @@
+* {
+	margin:0;
+	padding:0;
+}
+
+
+body {
+	background: #8cbcd7;
+	color: black;;
+	font-family:'lucida grande',verdana,helvetica,arial,sans-serif;
+	margin: 0;
+}
+
+
+#container {
+	width: 960px;
+	border: 1px solid rgb(64,64,64);
+	padding: 25px;
+	background: white;
+	margin: 0px auto;
+	position: relative;
+}
+
+a {
+	color: #003d4c;
+	text-decoration: underline;
+	font-weight: bold; 
+	font-size: 12px;
+}
