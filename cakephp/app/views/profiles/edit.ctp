@@ -10,6 +10,10 @@
 	echo $this->Form->input('Profile.pseudonim', array('label' => 'Pseudonim:'));
 	echo $this->Form->input('Profile.miejscowosc', array('label' => 'Miejscowość:'));
 	echo $this->Form->input('Profile.rok_urodzenia', array('label' => 'Rok urodzenia:'));
+	echo $this->Form->input('Profile.plec', array('options' => array(
+		'kobieta'=>'kobieta',
+		'mężczyzna'=>'mężczyzna'
+		), 'label' => 'Płeć:'));
 	echo $this->Form->input('Profile.gg', array('label' => 'Gadu-Gadu:'));
 	echo '<label>Zdjęcie:</label>'.$this->Form->file('Profile.profile'); // profile is the lower case model-name
 	echo $this->Form->end('Zapisz zmiany');
