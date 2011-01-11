@@ -7,6 +7,26 @@ class ProfilesController extends AppController {
 	function index() {
 		$this->set('profiles', $this->Profile->find('all'));
 	}
+	
+	function profile() {
+		//print_r($this->Session->read());
+		$this->Profile->id = $this->Session->read('zalogowany.id');
+		$this->set('profile', $this->Profile->read());
+		
+		$znajomi = $this->Profile->Friend->findAllByProfileId($this->Session->read('zalogowany.id'));
+		$znajomi = $this->Profile->query("SELECT * FROM profiles, friends WHERE (friends.profile_id=".$this->Session->read('zalogowany.id')." AND friends.friend_id=profiles.id) OR (friends.profile_id=profiles.id AND friends.friend_id=".$this->Session->read('zalogowany.id').")");
+		if(!empty($znajomi)) {
+			$this->set('friends', $znajomi); // $this->Profile->findAllById($znajomi['Friend']['friend_id'])
+		}
+	}
+	
+	function search() {
+		$znalezione = $this->Profile->findAllByImie($this->data['Profile']['zapytanie']);
+		$this->Session->write('zapytanie', $this->data['Profile']['zapytanie']);
+		if (!empty($znalezione)) {
+			$this->set('profiles', $znalezione);
+		}
+	}
 
 	function show($id = null) {
 		$this->Profile->id = $id;

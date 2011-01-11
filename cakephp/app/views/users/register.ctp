@@ -1,4 +1,4 @@
-<!-- File: /app/views/users/register.ctp -->
+﻿<!-- File: /app/views/users/register.ctp -->
 
 <h1>Panel: <span>Rejestracja</span></h1>
 <?php
