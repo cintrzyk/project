@@ -4,7 +4,7 @@
 * Adam Grabowski
 * Michał Rogulski
 * Michał Podlecki
-* Piotr Pazdan*
+* Piotr Pazdan
 
 07.01.2011 r.
 
