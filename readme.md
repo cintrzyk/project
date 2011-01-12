@@ -35,7 +35,7 @@ Wizja:
 
 Podstawowymi funkcjonalnościami wspomnianego wyżej serwisu są:
 
-- Tworzenie, edycja usuwanie profili użytkowników
+- Tworzenie, edycja profili użytkowników
 
 - Dodawanie, usuwanie znajomych 
 
