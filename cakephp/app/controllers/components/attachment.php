@@ -14,7 +14,8 @@ class AttachmentComponent extends Object
 			/* You may define as many options as you like */
 			'big'    => array(640, 480, 'resize'),
 			'med'    => array(263, 263, 'resizeCrop'),
-			'small'  => array( 90,  90, 'resizeCrop')
+			'mini'  => array(150,  100, 'resizeCrop'),
+			'gravatar' => array(300, 300, 'resize')
 		)
 	);
 
