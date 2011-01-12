@@ -3,14 +3,13 @@
 	padding:0;
 }
 
-
+/** General Style Info **/
 body {
 	background: #8cbcd7;
 	color: black;;
 	font-family:'lucida grande',verdana,helvetica,arial,sans-serif;
 	margin: 0;
 }
-
 
 #container {
 	width: 960px;
@@ -24,11 +23,9 @@ body {
 a {
 	color: #003d4c;
 	text-decoration: underline;
-	/*font-weight: bold;*/ 
+	/* font-weight: bold; */
 	font-size: 12px;
 }
-
-
 a:hover {
 	color: #367889;
 	text-decoration:none;
@@ -47,12 +44,34 @@ div.gravatar {
 
 img#gravatar {
 	display: block;
-	/*float: left;*/ 
+	/* float: left; */
 	margin: 0 auto;
 	/* padding: 2px; */
 	/* background: white; */
 }
 
+#top-welcome {
+	position: absolute;
+	top: 0;
+	right: 0;
+	/* background: rgb(244,244,244); */
+	/* border-bottom: 1px solid rgb(222,222,222); */
+	/* padding: 6px 0; */
+	color: red;
+	font-size: 12px;
+	/* padding-left: 10px; */
+}
+
+#logo {
+	color: #e4eff7;
+	font-family:georgia;
+	font-size:40px;
+	line-height:40px;
+	padding: 5px;
+	width: 1012px;
+	margin: 20px auto 0;
+	text-shadow:1px 1px 0 black;
+}
 
 div.info {
 	overflow: hidden;
@@ -65,7 +84,7 @@ div.dane {
 	float: right;
 	width: 264px;
 	margin: 40px 30px 30px 0;
-	/*border-left: 1px dotted #CFDCE6;*/ 
+	/* border-left: 1px dotted #CFDCE6; */
 	padding-left: 16px;
 }
 
@@ -106,6 +125,14 @@ h2 {
 	font-family: Georgia, serif;
 }
 
+#content-middle h2 {
+	background: transparent;
+	color: #4E7692;
+	margin-bottom: 2px;
+	font-weight: normal;
+	font-family: 'century gothic', Georgia, serif;
+}
+
 h3 {
 	color: #993;
 	font-family:'Gill Sans','lucida grande', helvetica, arial, sans-serif;
@@ -135,8 +162,6 @@ h4 {
 	font-weight: normal;
 	text-decoration: none;
 }
-
-
 #header h1 a:hover {
 	color: #fff;
 	background: #003d4c;
@@ -171,8 +196,54 @@ a.footer:hover {
 	color: white;
 }
 
+div.friend, div.city {
+	font-size: 15px;
+	font-family: Arial;
+	font-weight: bold;
+	color: #3297d0;
+	margin: 4px 0;
+}
+
+div.city {
+	font-weight: normal;
+	color: black;
+	font-size: 13px;
+}
 
 /** Tables **/
+#friendList table {
+	background: #fff;
+	border-right:0;
+	clear: both;
+	color: #333;
+	margin-bottom: 10px;
+	width: 100%;
+}
+
+#friendList table tr td {
+	background: #fff;
+	/* padding: 6px; */
+	text-align: left;
+	vertical-align: top;
+	border-bottom: 1px solid rgb(220,220,220);
+}
+#friendList th {
+	border:0;
+	border-bottom:2px solid #555;
+	text-align: left;
+	padding:4px;
+}
+#friendList th a {
+	display: block;
+	padding: 2px 4px;
+	text-decoration: none;
+}
+
+#friendList table tr:nth-child(2n) td {
+	background: #FBFBFB;
+}
+
+/** Tables ORIGINAL **/
 table {
 	background: #fff;
 	border-right:0;
@@ -192,12 +263,7 @@ th a {
 	padding: 2px 4px;
 	text-decoration: none;
 }
-th a.asc:after {
-	content: ' ⇣';
-}
-th a.desc:after {
-	content: ' ⇡';
-}
+
 table tr td {
 	background: #fff;
 	padding: 6px;
@@ -208,30 +274,7 @@ table tr td {
 table tr:nth-child(2n) td {
 	background: #f5f5f5;
 }
-table .altrow td {
-	background: #f5f5f5;
-}
-td.actions {
-	text-align: center;
-	white-space: nowrap;
-}
-table td.actions a {
-	margin: 0px 6px;
-	padding:2px 5px;
-}
-.cake-sql-log table {
-	background: #f4f4f4;
-}
-.cake-sql-log td {
-	padding: 4px 8px;
-	text-align: left;
-	font-family: Monaco, Consolas, "Courier New", monospaced;
-}
-.cake-sql-log caption {
-	color:#fff;
-}
 
-/** Paging **/
 form {
 	border-bottom: 1px solid rgb(222,222,222);
 	padding: 10px;
@@ -313,12 +356,7 @@ div.message {
 	padding: 10px 30px;
 	width: 500px;
 }
-div.error-message {
-	clear: both;
-	color: #fff;
-	font-weight: bold;
-	background: #c73e14;
-}
+
 p.error {
 	background-color: #e32;
 	color: #fff;

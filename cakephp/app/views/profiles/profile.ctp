@@ -23,23 +23,32 @@
 <h2 style="float: left">Znajdź znajomych:</h2>
 <h2 style="float: right">Lista znajomych</h2>
 
+<div id="friendList" style="width: 600px; height: 370px; overflow: auto; border: 1px solid black; padding: 10px; float: right; clear: right">
 <?php if(!empty($friends)): ?>
-<div id="friendList" style="width: 600px; height: 240px; overflow: auto; border: 1px solid black; padding: 10px; float: right; clear: right">
 	<table>
 	<?php foreach ($friends as $friend): ?>
 	<tr>
-		<td style="text-align: center">
+		<td style="width: 150px; padding: 1px;">
 			<?php echo $this->Html->image('/attachments/photos/mini/' . $friend['profiles']['profile_file_path'], array('alt' => 'Gravatar', 'title' => 'Zobacz zdjęcie', 'id' => 'gravatar')); ?>
-			<?php echo $html->link('Pokaż', array('controller' => 'profiles', 'action' => 'show', $friend['profiles']['id'])); ?> | <?php echo $html->link('Usuń znajomego', array('action' => 'deleteFriend', $friend['profiles']['id']), null, 'Jesteś pewien?' ); ?>
+			
 		</td>
-		<td><?php echo $friend['profiles']['imie']; ?></td>
-		<td><?php echo $friend['profiles']['nazwisko']; ?></td>
-		<td><?php echo $friend['profiles']['miejscowosc']; ?></td>
+		<td style="padding: 14px 20px;">
+			<div class="friend">
+				<?php echo $friend['profiles']['imie'].' '.$friend['profiles']['nazwisko']; ?>
+			</div>
+			<div class="city">
+				<?php echo $friend['profiles']['miejscowosc']; ?>
+			</div>
+		<div style="margin: 7px 0">
+			<?php echo $html->link('Pokaż profil', array('controller' => 'profiles', 'action' => 'show', $friend['profiles']['id'])).' | '.$html->link('Usuń z mojej listy znajomych', array('action' => 'deleteFriend', $friend['profiles']['id']), null, 'Jesteś pewien?' ); ?>
+		</div>
+		</td>
 	</tr>
 	<?php endforeach; ?>
 	</table>
-</div>
 <?php endif; ?>
+</div>
+
 
 <?php
 	echo $this->Form->create('Profile', array('action' => 'search', 'class' => 'search'));
@@ -57,6 +66,8 @@
 				  controls: ['GSmallMapControl']
 				  });
 </script>
+
+
 
 </div>
 
