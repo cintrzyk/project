@@ -32,15 +32,15 @@
 			<?php echo $this->Html->image('/attachments/photos/mini/' . $friend['profiles']['profile_file_path'], array('alt' => 'Gravatar', 'title' => 'Zobacz zdjęcie', 'id' => 'gravatar')); ?>
 			
 		</td>
-		<td style="padding: 14px 20px;">
+		<td style="padding: 14px 17px;">
 			<div class="friend">
 				<?php echo $friend['profiles']['imie'].' '.$friend['profiles']['nazwisko']; ?>
 			</div>
 			<div class="city">
 				<?php echo $friend['profiles']['miejscowosc']; ?>
 			</div>
-		<div style="margin: 7px 0">
-			<?php echo $html->link('Pokaż profil', array('controller' => 'profiles', 'action' => 'show', $friend['profiles']['id'])).' | '.$html->link('Usuń z mojej listy znajomych', array('action' => 'deleteFriend', $friend['profiles']['id']), null, 'Jesteś pewien?' ); ?>
+		<div style="margin: 7px 0; color: #d0d0d0">
+			<?php echo $html->link('Pokaż profil', array('controller' => 'profiles', 'action' => 'show', $friend['profiles']['id'])).' | '.$html->link('Wyślij wiadomość', array('controller' => 'messages', 'action' => 'send', $friend['profiles']['id'])).' | '.$html->link('Usuń z mojej listy znajomych', array('action' => 'deleteFriend', $friend['profiles']['id']), null, 'Jesteś pewien?' ); ?>
 		</div>
 		</td>
 	</tr>
@@ -72,3 +72,9 @@
 </div>
 
 <?php echo $html->link('Pozostałe profile', array('controller' => 'profiles', 'action' => 'index')) ?>
+
+<?php if ($nieprzeczytane > 0): ?>
+<div id="messageInfo">
+		<p><b>Masz nową wiadomość w skrzynce.</b></p><?php echo $html->link('Odczytaj wiadomość', array('controller' => 'messages', 'action' => 'index')); ?>
+</div>
+<?php endif; ?>

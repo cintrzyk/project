@@ -18,15 +18,16 @@
 				}, 4000);
 			}
 			
-			$('#first').mouseover(function() {
-				$('#first ul').show();
+			$('#menu li').mouseover(function() {
+				$('#menu li ul').show();
 			}).mouseout(function() {
-				$('#first ul').hide();
+				$('#menu li ul').hide();
 				});
-			$('#ProfileZapytanie').click(function() {
-				$this.attr('value','');
-			});
+			document.getElementById('ProfileZapytanie').onclick = function() {
+				document.getElementById('ProfileZapytanie').value = "";
+			};
 		});
+		
 	</script>
 	
 </head>
@@ -35,12 +36,13 @@
 	<div id="container">
 	<?php if($this->Session->check('zalogowany')): ?>
 	<div id="top-welcome">
-		<ul>
+		<ul id="menu">
 			<li id="first"><?php echo $html->link('Mój profil', array('controller' => 'profiles', 'action' => 'profile'))?>
 				<ul>
 					<li><?php echo $html->link('Pokaż', array('controller' => 'profiles', 'action' => 'profile'))?></li>
 					<li><?php echo $html->link('Edytuj', array('controller' => 'profiles', 'action' => 'edit')); ?></li>
 					<li><?php echo $html->link('Usuń zdjęcie', array('controller' => 'profiles', 'action' => 'deletePhoto'), null, 'Czy napewno usunąć zdjęcie?'); ?></li>
+					<li><?php echo $html->link('Skrzynka odbiorcza', array('controller' => 'messages', 'action' => 'index')); ?></li>
 					<li><?php echo $html->link('Wyloguj', array('controller' => 'users', 'action' => 'logout')); ?></li>
 				</ul>
 			</li>

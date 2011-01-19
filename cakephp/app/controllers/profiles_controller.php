@@ -13,6 +13,11 @@ class ProfilesController extends AppController {
 		$this->Profile->id = $this->Session->read('zalogowany.id');
 		$this->set('profile', $this->Profile->read());
 		
+		$ile = $this->Profile->Message->find('count', array(
+			  'conditions' => array('Message.status =' => 'new', 'odbiorca_id =' => $this->Session->read('zalogowany.id'))
+		   ));
+		$this->set('nieprzeczytane', $ile);
+		
 		$znajomi = $this->Profile->Friend->findAllByProfileId($this->Session->read('zalogowany.id'));
 		$znajomi = $this->Profile->query("SELECT * FROM profiles, friends WHERE (friends.profile_id=".$this->Session->read('zalogowany.id')." AND friends.friend_id=profiles.id) OR (friends.profile_id=profiles.id AND friends.friend_id=".$this->Session->read('zalogowany.id').")");
 		if(!empty($znajomi)) {
@@ -39,6 +44,7 @@ class ProfilesController extends AppController {
 		$this->data['Friend']['friend_id'] = $id;
 		$this->data['Friend']['profile_id'] = $this->Session->read('zalogowany.id');
 		$this->Profile->Friend->save($this->data);
+		$this->Session->setFlash('Masz nowego znajomego.');
 		$this->redirect(array('action' => 'profile'));
 	}
 	

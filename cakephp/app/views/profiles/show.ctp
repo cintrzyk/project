@@ -40,7 +40,7 @@
 				<?php echo $friend['profiles']['miejscowosc']; ?>
 			</div>
 		<div style="margin: 7px 0">
-			<?php echo $html->link('Pokaż profil', array('controller' => 'profiles', 'action' => 'show', $friend['profiles']['id'])).' | '.$html->link('Usuń z mojej listy znajomych', array('action' => 'deleteFriend', $friend['profiles']['id']), null, 'Jesteś pewien?' ); ?>
+			<?php echo $html->link('Pokaż profil', array('controller' => 'profiles', 'action' => 'show', $friend['profiles']['id'])); ?>
 		</div>
 		</td>
 	</tr>

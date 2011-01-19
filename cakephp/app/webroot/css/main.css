@@ -227,6 +227,7 @@ div.city {
 	vertical-align: top;
 	border-bottom: 1px solid rgb(220,220,220);
 }
+
 #friendList th {
 	border:0;
 	border-bottom:2px solid #555;
@@ -241,6 +242,70 @@ div.city {
 
 #friendList table tr:nth-child(2n) td {
 	background: #FBFBFB;
+}
+
+.messagesList {
+	width: 100%;
+	font: 16px Arial;
+}
+
+.messagesList tr th {
+	padding: 5px 12px;
+	font: bold 14px verdana;
+}
+
+.messagesList tr td {
+	padding: 12px 12px;
+	font: 14px verdana;
+	background: #fdfdfd;
+}
+
+tr.new td {
+	background: #f3ffeb;
+}
+
+tr td {
+	
+}
+
+/*
+.messagesList tr:hover td{
+	background: #f6f6f6;
+}
+*/
+
+.messagesList tr td a {
+	color: #3297D0;
+	font: 14px Verdana;
+	text-decoration: none;
+}
+
+.messagesList tr td a:hover {
+	text-decoration: underline;
+}
+
+td.messageTresc {
+	padding: 10px 10px !important;
+	color: black;
+	background: white;
+	border: 1px solid #DDDDDD;
+	font: 13px verdana
+}
+
+td.messageTresc h3 {
+	color: black;
+	font: bold 13px Arial;
+	text-decoration: underline;
+	margin: 0 0 20px;
+}
+
+td.messageTresc div {
+	margin: 50px 0 0;
+	font-size: 11px;
+}
+
+td.messageTresc div a {
+	font-size: 11px;
 }
 
 /** Tables ORIGINAL **/
@@ -271,10 +336,11 @@ table tr td {
 	vertical-align: top;
 	border-bottom:1px solid #ddd;
 }
-table tr:nth-child(2n) td {
-	background: #f5f5f5;
+table.list tr:nth-child(2n) td {
+	background: #fdfdfd;
 }
 
+/** Forms **/
 form {
 	border-bottom: 1px solid rgb(222,222,222);
 	padding: 10px;
@@ -340,6 +406,49 @@ form.search input[type=text] {
 	width: 292px;
 	font-style: italic;
 	color: rgb(146,146,146);
+}
+
+.messageForm {
+	border-bottom: 1px solid rgb(222,222,222);
+	padding: 10px;
+	background: #4E7692;
+	width: 80%;
+	font-family: Verdana;
+	font-size: 14px;
+	margin-bottom: 20px;
+}
+
+.messageForm label {
+	float: none;
+	display: block;
+	/* width: 140px; */
+	text-align: left;
+	padding: 2px 10px;
+	color: #CFDCE6;
+	font-weight: normal;
+	font-size: 13px;
+	line-height: 17px;
+	width: 100%;
+}
+
+.messageForm input, .messageForm textarea {
+	border: 2px solid #CFDCE6;
+	background: white;
+	color: black;
+	padding: 4px 4px;
+	margin: 4px 10px;
+}
+
+.messageForm input[type=text] {
+	width: 450px;
+	font-weight: bold;
+}
+
+.messageForm input[type=submit] {
+	color: black;
+	padding: 2px 15px;
+	margin: 10px 0 5px 531px;
+	border: 2px solid #CFDCE6;
 }
 /** Forms **/
 
@@ -428,7 +537,7 @@ p.error em {
 	li#first ul li a {
 		color: #9f354e;
 		text-decoration: none;
-		padding: 7px 10px;
+		padding: 7px 7px 7px 26px;
 		/* margin: 1px; */
 		width: inherit;
 		display: block;
@@ -445,4 +554,41 @@ p.error em {
 	li#first ul {
 		display: none;
 		border-top: 1px solid #404040;
+		border-bottom: 1px solid #404040;
+		border-left: 1px solid #404040;
+		position: absolute;
+		width: 180px;
+		left: -60px;
 	}
+	
+	div.error-message {
+	clear: both;
+	color: black;
+	font: 12px Arial;
+	font-weight: bold;
+	background: pink;
+	padding: 4px 10px;
+	margin: 5px 0;
+	border: 1px solid red;
+	}
+
+#messageInfo {
+	position: absolute;
+	top: -60px;
+	right: 1px;
+	border: 1px solid #46a500;
+	background: #f0fee5;
+	color: #46a500;
+	padding: 10px 30px;
+	font: 13px Arial
+}
+	
+#messageInfo a {
+	text-decoration: underline;
+	color: black;
+	font-style: italic;
+}
+
+#messageInfo a:hover {
+	text-decoration: none;
+}
