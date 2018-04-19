@@ -6,7 +6,7 @@
 * Michał Podlecki
 * Piotr Pazdan
 
-07.01.2011 r.
+07.01.2011
 
 #Be In Touch
 
